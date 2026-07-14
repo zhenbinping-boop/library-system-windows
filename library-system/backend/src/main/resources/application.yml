@@ -1,0 +1,25 @@
+# ============================================
+# Spring Boot 配置文件
+# ============================================
+
+server:
+  port: 8081                # 后端服务端口
+
+spring:
+  datasource:
+    # 数据库连接地址
+    url: jdbc:mysql://localhost:3306/library_db?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf-8
+    username: root              # 数据库用户名
+    password: 6677890junzhe           # 数据库密码（改成你自己的）
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jackson:
+    date-format: yyyy-MM-dd     # 日期格式
+    time-zone: GMT+8            # 时区
+
+logging:
+  level:
+    com.library: debug          # 打印SQL日志
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
